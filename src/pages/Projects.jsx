@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { MdAddCircle } from "react-icons/md";
 
 const Projects = () => {
   return (
