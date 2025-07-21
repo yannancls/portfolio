@@ -47,7 +47,7 @@ const Sidebar = () => {
               )}
             </Link>
           );
-        })}sasasasasasa
+        })}
       </div>
 
       <DarkLightMode />
