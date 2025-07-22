@@ -51,7 +51,7 @@ const Sidebar = () => {
         </div>
 
         
-        <DarkLightMode />
+        {/* <DarkLightMode /> */}
     </div>
   );
 };
