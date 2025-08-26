@@ -24,30 +24,30 @@ const Sidebar = () => {
     <div className="flex flex-col justify-between items-center w-[185px] h-full bg-[#24575B] dark:bg-[#26333A] rounded-[1rem] py-6">
 
         <div className="flex-1 flex flex-col justify-center items-center space-y-4">
-        {menuItems.map((item) => {
-            const isActive = location.pathname === item.path;
-            return (
-            <Link
-                to={item.path}
-                key={item.id}
-                className={`flex flex-col items-center space-y-1 transition-all duration-300 group ${
-                isActive ? "text-[#4FC6CE]" : "text-white"
-                }`}
-            >
-                <item.icon
-                className={`text-4xl transition-all duration-300 ${
-                    isActive ? "text-[#4FC6CE]" : "text-[#98B1BA] group-hover:text-[#4FC6CE]"
-                }`}
-                />
-                <span className="text-sm transition-all duration-300">
-                    {item.title}
-                </span>
-                {item.id !== "contact" && (
-                    <hr className="w-[100px] border-t border-[#98B1BA] mb-2" />
-                )}
-            </Link>
-            );
-        })}
+            {menuItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                    <Link
+                        to={item.path}
+                        key={item.id}
+                        className={`flex flex-col items-center space-y-1 transition-all duration-300 group ${
+                        isActive ? "text-[#4FC6CE]" : "text-white"
+                        }`}
+                    >
+                        <item.icon
+                        className={`text-4xl transition-all duration-300 ${
+                            isActive ? "text-[#4FC6CE]" : "text-[#98B1BA] group-hover:text-[#4FC6CE]"
+                        }`}
+                        />
+                        <span className="text-sm transition-all duration-300">
+                            {item.title}
+                        </span>
+                        {item.id !== "contact" && (
+                            <hr className="w-[100px] border-t border-[#98B1BA] mb-2" />
+                        )}
+                    </Link>
+                );
+            })}
         </div>
 
         
