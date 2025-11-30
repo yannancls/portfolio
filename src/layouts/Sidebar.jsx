@@ -21,9 +21,9 @@ const Sidebar = () => {
     ];
 
   return (
-    <div className="flex flex-col justify-between items-center w-[185px] h-full bg-[#24575B] dark:bg-[#26333A] rounded-[1rem] py-6">
+    <div className="flex flex-col justify-between items-center w-[185px] h-full bg-[#24575B] dark:bg-[#26333A] rounded-[1rem] py-6 transition-colors">
 
-        <div className="flex-1 flex flex-col justify-center items-center space-y-4">
+        <div className="flex-1 flex flex-col justify-center items-center space-y-10">
             {menuItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
@@ -42,9 +42,9 @@ const Sidebar = () => {
                         <span className="text-sm transition-all duration-300">
                             {item.title}
                         </span>
-                        {item.id !== "contact" && (
+                        {/* {item.id !== "contact" && (
                             <hr className="w-[100px] border-t border-[#98B1BA] mb-2" />
-                        )}
+                        )} */}
                     </Link>
                 );
             })}
