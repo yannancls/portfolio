@@ -1,4 +1,3 @@
-// import React from 'react'
 import Picture from '../assets/Picture.png';
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -6,11 +5,15 @@ import { SlSocialGithub } from "react-icons/sl";
 import { MdMailOutline } from "react-icons/md";
 
 const Home = () => {
+  const handleClick = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="flex flex-col md:flex-row items-center justify-between h-full cursor-default px-6 md:px-20">
 
       {/* Left side */}
-      <div className="flex flex-col justify-center flex-1 text-center space-y-4">
+      <div className="flex flex-col justify-center flex-1 text-center space-y-4 text-sm md:text-lg ">
         <div className="text-4xl sm:text-5xl md:text-7xl text-[#24575B] dark:text-[#98B1BA] transition-colors space-y-4">
           <p>Hi,</p>
           <p>I'm Alyanna Nicolas</p>
@@ -20,7 +23,7 @@ const Home = () => {
           <p>Frontend Developer</p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-6 justify-center items-center">
+        <div className="flex flex-col text-sm md:text-lg sm:flex-row gap-4 sm:gap-10 mt-6 justify-center items-center">
           <button className="px-8 py-2 border-3 text-[#24575B] dark:text-[#98B1BA] border-[#24575B24575B] dark:border-[#98B1BA] rounded-full cursor-pointer transition-colors">
             About Me
           </button>
@@ -29,7 +32,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-
 
       {/* Right side */}
       <div className="flex flex-col items-center flex-1 mt-8 md:mt-0 space-y-6">
@@ -42,15 +44,26 @@ const Home = () => {
 
         {/* Social Icons */}
         <div className="flex gap-6 text-[#4FC6CE] text-xl">
-          <SlSocialFacebook className="cursor-pointer hover:scale-110 transition-transform" />
-          <SlSocialLinkedin className="cursor-pointer hover:scale-110 transition-transform" />
-          <SlSocialGithub className="cursor-pointer hover:scale-110 transition-transform" />
-          <MdMailOutline className="cursor-pointer hover:scale-110 transition-transform" />
+          <SlSocialFacebook
+            className="cursor-pointer hover:scale-110 transition-transform"
+            onClick={() => handleClick("https://facebook.com/alyanna.nicolas17")}
+          />
+          <SlSocialLinkedin
+            className="cursor-pointer hover:scale-110 transition-transform"
+            onClick={() => handleClick("https://www.linkedin.com/in/alyanna-nicolas-502134236/")}
+          />
+          <SlSocialGithub
+            className="cursor-pointer hover:scale-110 transition-transform"
+            onClick={() => handleClick("https://github.com/yannancls")}
+          />
+          <MdMailOutline
+            className="cursor-pointer hover:scale-110 transition-transform"
+            onClick={() => handleClick("mailto:nicolasalyanna@gmail.com")}
+          />
         </div>
-
       </div>
     </div>
   )
 }
 
-export default Home
+export default Home;
