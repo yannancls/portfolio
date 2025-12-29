@@ -22,7 +22,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="flex flex-col justify-between items-center w-[185px] h-full bg-[#133e41] dark:bg-[#26333A] rounded-[1rem] py-6 transition-colors overflow-y-auto">
+        <div className="flex flex-col justify-between items-center w-[150px] h-full bg-[#133e41] dark:bg-[#26333A] rounded-[1rem] py-6 transition-colors overflow-y-auto">
 
             <div className="flex-shrink-0 mb-6">
                 <img src={ANLogo} alt="Logo" className="w-16 h-16 object-contain" />

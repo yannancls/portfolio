@@ -16,7 +16,7 @@ export default function DarkLightMode() {
   return (
     <button
       onClick={() => setIsDarkMode(!isDarkMode)}
-      className="bg-[#98B1BA] hover:bg-[#4FC6CE] cursor-pointer rounded-md p-3 w-12 h-12 flex items-center justify-center transition-all duration-300"
+      className="bg-[#98B1BA] hover:bg-[#4FC6CE] cursor-pointer rounded-full p-3 w-12 h-12 flex items-center justify-center transition-all duration-300"
     >
       {isDarkMode ? (
         <MdLightMode className="text-4xl text-gray-600 hover:text-[#26333A] transition duration-300" />

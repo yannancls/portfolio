@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Master = ({ children, title_1, title_2 }) => {
 
   return (
-    <div className='flex h-screen bg-[#EBEDF0] dark:bg-[#1A2328] font-[Jaldi] p-3 overflow-hidden transition-colors'>
+    <div className='flex h-screen bg-[#EBEDF0] dark:bg-[#1A2328] font-[Jaldi] p-3 overflow-auto transition-colors w-full'>
 
       <Sidebar />
 
@@ -19,7 +19,7 @@ const Master = ({ children, title_1, title_2 }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="py-2 px-5"
+          className="main-scroll py-2 px-5 flex-1 overflow-auto"
         >
           {children}
         </motion.div>
